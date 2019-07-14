@@ -25,11 +25,9 @@ public class SensorDataRepository {
 
     @PostConstruct
     public void postConstruct() {
-        // Set JDBC Hive Driver
         Try.run(() -> Class.forName(DRIVER_NAME))
                 .onFailure(t -> LOGGER.error("Could not get driver. Message: {}", t.getMessage()))
                 .getOrElseThrow(ConnectionException::create);
-        // Connect to Hive - Choose a user that has the rights to write into /user/hive/warehouse/
         connection = Try.of(() -> DriverManager.getConnection(CONNECTION_URL))
                 .onFailure(t -> LOGGER.error("Could not create connection. Message: {}", t.getMessage()))
                 .getOrElseThrow(ConnectionException::create);
