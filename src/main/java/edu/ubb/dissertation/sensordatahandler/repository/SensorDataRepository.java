@@ -17,7 +17,7 @@ public class SensorDataRepository {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SensorDataRepository.class);
 
-    private static final String CONNECTION_URL = "jdbc:hive2://192.168.56.103:10000/dissertation";
+    private static final String CONNECTION_URL = "jdbc:hive2://192.168.43.9:10000/dissertation";
     private static final String DRIVER_NAME = "org.apache.hive.jdbc.HiveDriver";
 
     private Connection connection;

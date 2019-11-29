@@ -18,8 +18,8 @@ public class MqttClientCreator {
     private static final Logger LOGGER = LoggerFactory.getLogger(MqttClientCreator.class);
 
     private static final String CLIENT_ID = "SENSOR_CLIENT_ID";
-    private static final String TOPIC_NAME = "dissertation/sensor_data";
-    private static final String BROKER_ADDRESS = "tcp://iot.eclipse.org:1883";
+    private static final String TOPIC_NAME = "dissertation/sensor_data_1";
+    private static final String BROKER_ADDRESS = "tcp://mqtt.eclipse.org:1883";
 
     @Autowired
     private SensorMqttCallback sensorMqttCallback;
